@@ -1,6 +1,8 @@
 -- Constants
 SSID    = "<YOURSSID>"
 APPWD   = "<WIFIPASS>"
+WIFI_SIGNAL_MODE = wifi.PHYMODE_N
+
 CMDFILE = "httppost.lua"   -- File that is executed after connection
 
 -- Some control variables
@@ -44,6 +46,7 @@ if ( ( ipAddr == nil ) or  ( ipAddr == "0.0.0.0" ) ) then
   print("Configuring WIFI....")
   wifi.setmode( wifi.STATION )
   wifi.sta.config( SSID , APPWD)
+  wifi.setphymode( WIFI_SIGNAL_MODE )
   print("Waiting for connection")
   tmr.alarm( 0 , 2500 , 0 , checkWIFI )  -- Call checkWIFI 2.5S in the future.
 else
