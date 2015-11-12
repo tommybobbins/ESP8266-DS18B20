@@ -1,4 +1,4 @@
-# ESP8266-TMP102
+# ESP8266-DS18B20
 
 Read the temperature from a DS18B20 sensor and publish it to an HTTP server over WiFi.
 
