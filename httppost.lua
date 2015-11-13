@@ -31,11 +31,11 @@ if (Temperature < 85 ) then
       end)
   conn:connect(HTTPPORT,HTTPHOST)
 
-  conn:on("disconnection", function(conn)
                         t=nil
                         Temperature=nil
                         ds18b20 = nil
                         package.loaded["ds18b20"]=nil
+  conn:on("disconnection", function(conn)
                         print("Got disconnection...")
                         print ("Deep sleep...")
                         node.dsleep(MICROSECS);
