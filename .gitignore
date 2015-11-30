@@ -3,3 +3,5 @@ init_huxley.lua
 joelua.sh
 *.bak
 .gitignore
+httppost_bluejelly.lua
+*.bak
